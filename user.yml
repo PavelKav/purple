@@ -1,0 +1,28 @@
+user:
+  isAdmin: true
+  name: "Иван Петров"
+  age: 32
+  position: "DevOps инженер"
+  skills:
+    - name: "Kubernetes"
+      level: 5
+      description: |
+        Опыт настройки кластеров на bare-metal и в облаке.
+        Знание Helm, Kustomize и сетевых политик.
+    - name: "Ansible"
+      level: 4
+      description: |
+        Написание ролей, плейбуков и модульная структура для CI/CD.
+  address:
+    country: "Россия"
+    city: "Москва"
+    street: "Ленинградский проспект"
+    houseNumber: 12
+    apartmentNumber: 45
+  pets:
+    - name: "Барсик"
+      breed: "Сибирская"
+      canMeow: true
+    - name: "Рекс"
+      breed: "Овчарка"
+      canMeow: false

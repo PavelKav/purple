@@ -3,8 +3,9 @@ kind: Service
 metadata:
   name: conv-app-clusterip
 spec:
+  type: ClusterIP
   selector:
     components: frontend
   ports:
   - port: 80
-#    targetPort: <Target Port>
+    targetPort: 80

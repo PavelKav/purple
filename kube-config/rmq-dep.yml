@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: rmq
-        image: rabbitmq:3.12.7
+        image: rabbitmq:3.12.7-management
         env:
           - name: RABBITMQ_DEFAULT_USER
             value: demo

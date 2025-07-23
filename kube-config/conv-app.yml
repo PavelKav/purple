@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: conv-app
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       components: frontend

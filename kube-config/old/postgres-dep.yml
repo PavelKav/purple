@@ -31,3 +31,11 @@ spec:
             value: demo
         ports:
         - containerPort: 5432
+        volumeMounts:
+          - name: postgres-data
+            mountPath: /var/lib/postgresql/data
+            subPath: postgres
+      volumes:
+        - name: postgrs-data
+          persistentVolumeClaim:
+            claimName: pvc-postgres

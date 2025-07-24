@@ -18,8 +18,6 @@ spec:
           ports:
             - containerPort: 3000
           env:
-            - name: AMQP_EXCHANGE
-              value: "main-exchange"
             - name: AMQP_USER
               valueFrom:
                 secretKeyRef:
@@ -30,8 +28,19 @@ spec:
                 secretKeyRef:
                   name: rmq-secret
                   key: AMQP_PASSWORD
+            - name: AMQP_EXCHANGE
+              valueFrom:
+                secretKeyRef:
+                  name: rmq-secret
+                  key: AMQP_EXCHANGE
             - name: AMQP_HOSTNAME
-              value: "rmq-clusterip"
+              valueFrom:
+                secretKeyRef:
+                  name: rmq-secret
+                  key: AMQP_HOSTNAME
+          envFrom:
+            - secretRef:
+                name: seeduser-secret
           volumeMounts:
             - name: uploads
               mountPath: /opt/app/uploads
